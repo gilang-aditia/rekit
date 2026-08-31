@@ -1,0 +1,9 @@
+{
+  "name": "dialog",
+  "type": "components:ui",
+  "description": "Modal dialog overlay.",
+  "files": ["src/components/ui/dialog.tsx"],
+  "dependencies": ["radix-ui", "lucide-react"],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}

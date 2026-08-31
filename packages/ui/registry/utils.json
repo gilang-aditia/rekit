@@ -1,0 +1,9 @@
+{
+  "name": "utils",
+  "type": "components:lib",
+  "description": "Utility function cn() untuk menggabungkan class names.",
+  "files": ["src/lib/utils.ts"],
+  "dependencies": ["clsx", "tailwind-merge"],
+  "devDependencies": [],
+  "registryDependencies": []
+}

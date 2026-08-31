@@ -1,0 +1,9 @@
+{
+  "name": "sonner",
+  "type": "components:ui",
+  "description": "Notifikasi toast menggunakan Sonner.",
+  "files": ["src/components/ui/sonner.tsx"],
+  "dependencies": ["sonner", "next-themes"],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}

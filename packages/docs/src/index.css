@@ -1,0 +1,58 @@
+/* Token, tema, dan base style berasal dari library — satu sumber kebenaran. */
+@import "rakit-ui/styles.css";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
+
+/* Komponen library ikut dipindai agar utility-nya ter-generate. */
+@source "../../ui/src/**/*.{ts,tsx}";
+
+@theme {
+  --breakpoint-3xl: 100rem;
+}
+
+:root {
+  --header-height: calc(var(--spacing) * 14);
+}
+
+@layer base {
+  html {
+    scroll-padding-top: var(--header-height);
+    overscroll-behavior-y: none;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    position: relative;
+  }
+}
+
+@utility container-wrapper {
+  width: 100%;
+  padding-inline: calc(var(--spacing) * 2);
+  margin-inline: auto;
+
+  @variant 3xl {
+    max-width: calc(var(--breakpoint-2xl) + 2rem);
+  }
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Mask fade atas/bawah untuk area sidebar yang bisa di-scroll. */
+@utility scroll-fade {
+  --_fade: min(12%, calc(var(--spacing) * 10));
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 var(--scroll-fade-t, var(--_fade)),
+    #000 calc(100% - var(--scroll-fade-b, var(--_fade))),
+    transparent 100%
+  );
+  mask-repeat: no-repeat;
+}
