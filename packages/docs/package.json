@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "pnpm --filter rakit-ui build",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
