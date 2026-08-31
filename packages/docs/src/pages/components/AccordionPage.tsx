@@ -17,7 +17,7 @@ export default function AccordionPage() {
         <H2>Instalasi</H2>
         <InstallTabs
           items={{
-            npx: 'npx rakit-ui add accordion',
+            npx: 'npx @moonblanck/rakit-ui add accordion',
           }}
         />
       </div>

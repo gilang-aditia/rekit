@@ -91,7 +91,7 @@ export async function initCommand(options: { yes: boolean; cwd: string }) {
     console.log(chalk.dim('  plugins: [react(), tailwindcss()]'));
     console.log('');
     console.log('Lalu tambahkan komponen:');
-    console.log(chalk.cyan('  npx rakit-ui add button'));
+    console.log(chalk.cyan('  npx @moonblanck/rakit-ui add button'));
     console.log('');
   } catch (error) {
     spinner.fail('Gagal inisialisasi.');

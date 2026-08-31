@@ -18,7 +18,7 @@ export default function CardPage() {
         <H2>Instalasi</H2>
         <InstallTabs
           items={{
-            npx: 'npx rakit-ui add card',
+            npx: 'npx @moonblanck/rakit-ui add card',
           }}
         />
       </div>

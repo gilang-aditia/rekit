@@ -26,7 +26,7 @@ async function resolveRegistryDeps(
   const registryPath = path.join(registryDir, `${componentName}.json`);
   if (!fs.existsSync(registryPath)) {
     throw new Error(
-      `Komponen "${componentName}" tidak ditemukan di registry.\nJalankan 'rakit-ui add --help' untuk melihat komponen yang tersedia.`
+      `Komponen "${componentName}" tidak ditemukan di registry.\nJalankan 'npx @moonblanck/rakit-ui add --help' untuk melihat komponen yang tersedia.`
     );
   }
 

@@ -17,7 +17,7 @@ export default function ButtonPage() {
         <H2>Instalasi</H2>
         <InstallTabs
           items={{
-            npx: 'npx rakit-ui add button',
+            npx: 'npx @moonblanck/rakit-ui add button',
           }}
         />
       </div>

@@ -18,7 +18,7 @@ export function InstallTabs({ items, cliCommand }: InstallTabsProps) {
   const commands = cliCommand
     ? {
         pnpm: `pnpm dlx rakit-ui@latest ${cliCommand}`,
-        npm: `npx rakit-ui@latest ${cliCommand}`,
+        npm: `npx @moonblanck/rakit-ui@latest ${cliCommand}`,
         yarn: `yarn dlx rakit-ui@latest ${cliCommand}`,
         bun: `bunx --bun rakit-ui@latest ${cliCommand}`,
       }
