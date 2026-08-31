@@ -17,10 +17,10 @@ interface InstallTabsProps {
 export function InstallTabs({ items, cliCommand }: InstallTabsProps) {
   const commands = cliCommand
     ? {
-        pnpm: `pnpm dlx rakit-ui@latest ${cliCommand}`,
+        pnpm: `pnpm dlx @moonblanck/rakit-ui@latest ${cliCommand}`,
         npm: `npx @moonblanck/rakit-ui@latest ${cliCommand}`,
-        yarn: `yarn dlx rakit-ui@latest ${cliCommand}`,
-        bun: `bunx --bun rakit-ui@latest ${cliCommand}`,
+        yarn: `yarn dlx @moonblanck/rakit-ui@latest ${cliCommand}`,
+        bun: `bunx --bun @moonblanck/rakit-ui@latest ${cliCommand}`,
       }
     : items
 
