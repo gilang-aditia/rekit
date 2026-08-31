@@ -1,0 +1,9 @@
+{
+  "name": "card",
+  "type": "components:ui",
+  "description": "Container konten dengan header, body, dan footer.",
+  "files": ["src/components/ui/card.tsx"],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}

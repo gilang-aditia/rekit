@@ -1,0 +1,9 @@
+{
+  "name": "chart",
+  "type": "components:ui",
+  "description": "Komponen chart dengan Recharts.",
+  "files": ["src/components/ui/chart.tsx"],
+  "dependencies": ["recharts"],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}

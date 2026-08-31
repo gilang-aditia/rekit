@@ -1,0 +1,9 @@
+{
+  "name": "alert",
+  "type": "components:ui",
+  "description": "Menampilkan pesan penting kepada pengguna.",
+  "files": ["src/components/ui/alert.tsx"],
+  "dependencies": ["class-variance-authority"],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}

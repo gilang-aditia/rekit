@@ -1,0 +1,9 @@
+{
+  "name": "select",
+  "type": "components:ui",
+  "description": "Dropdown pemilihan opsi.",
+  "files": ["src/components/ui/select.tsx"],
+  "dependencies": ["radix-ui", "lucide-react"],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}
