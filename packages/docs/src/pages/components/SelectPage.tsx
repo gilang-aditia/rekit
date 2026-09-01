@@ -38,7 +38,7 @@ export default function SelectPage() {
   export function SelectDemo() {
   return (
     <Select>
-      <SelectTrigger className="w-[180px]">
+      <SelectTrigger className="w-45">
         <SelectValue placeholder="Pilih framework" />
       </SelectTrigger>
       <SelectContent>
@@ -51,7 +51,7 @@ export default function SelectPage() {
   }`}
         >
           <Select>
-            <SelectTrigger className="w-[180px]">
+            <SelectTrigger className="w-45">
               <SelectValue placeholder="Pilih framework" />
             </SelectTrigger>
             <SelectContent>

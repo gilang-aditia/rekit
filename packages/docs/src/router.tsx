@@ -20,6 +20,7 @@ import DesignColor from './pages/design/Color'
 import DesignTonal from './pages/design/Tonal'
 import DesignComponents from './pages/design/Components'
 import DesignWeb from './pages/design/Web'
+import DesignGuidelines from './pages/design/Guidelines'
 import ButtonPage from './pages/components/ButtonPage'
 import CardPage from './pages/components/CardPage'
 import AccordionPage from './pages/components/AccordionPage'
@@ -77,6 +78,7 @@ const designPages: Record<string, RouteObject['element']> = {
   '/design/tonal': <DesignTonal />,
   '/design/components': <DesignComponents />,
   '/design/web': <DesignWeb />,
+  '/design/guidelines': <DesignGuidelines />,
 }
 
 const designRoutes: RouteObject[] = designNav

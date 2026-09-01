@@ -21,12 +21,18 @@ export default function ComponentsIndex() {
             key={item.href}
             to={item.href}
             className={cn(
-              'flex h-9 items-center justify-between gap-2 rounded-lg bg-surface px-3 text-[0.8rem] font-medium transition-colors',
-              item.soon ? 'text-muted-foreground' : 'text-surface-foreground hover:bg-accent'
+              'flex h-9 items-center justify-between gap-2 rounded-lg px-3 text-[0.8rem] font-medium transition-colors',
+              item.soon
+                ? 'bg-muted/40 text-muted-foreground opacity-70 pointer-events-none'
+                : 'bg-primary/10 text-primary hover:bg-primary/20'
             )}
           >
             <span className="truncate">{item.title}</span>
-            {item.soon && <span className="shrink-0 text-[0.7rem] text-muted-foreground">soon</span>}
+            {item.soon && (
+              <span className="shrink-0 text-[0.7rem] text-muted-foreground">
+                soon
+              </span>
+            )}
           </Link>
         ))}
       </div>

@@ -51,7 +51,7 @@ export default function AccordionPage() {
   )
   }`}
         >
-          <div className="w-[450px]">
+          <div className="w-112.5">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
                 <AccordionTrigger>Apakah ini bisa diakses?</AccordionTrigger>

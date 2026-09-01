@@ -27,8 +27,8 @@ export default function InputPage() {
   return <Input type="email" placeholder="Email" />
   }`}
         >
-          <div className="w-[300px]">
-            <Input type="email" placeholder="Email" />
+          <div className="w-75">
+            <Input type="email" placeholder="Email" className="w-75" />
           </div>
         </ComponentPreview>
       </div>
@@ -42,7 +42,7 @@ export default function InputPage() {
   return <Input disabled type="email" placeholder="Email" />
   }`}
         >
-          <div className="w-[300px]">
+          <div className="w-75">
             <Input disabled type="email" placeholder="Email" />
           </div>
         </ComponentPreview>

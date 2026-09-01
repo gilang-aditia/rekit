@@ -151,4 +151,10 @@ export const designNav: NavGroup[] = [
       { title: 'Padanan web', href: '/design/web' },
     ],
   },
+  {
+    title: 'Pedoman',
+    items: [
+      { title: 'Pedoman UI/UX', href: '/design/guidelines', isNew: true },
+    ],
+  },
 ]

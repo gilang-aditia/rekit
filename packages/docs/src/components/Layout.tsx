@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils'
 
 function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-background">
+    <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-md border-b border-border/40">
       <div className="container-wrapper px-6">
         <div className="flex h-(--header-height) items-center gap-2 **:data-[slot=separator]:h-4!">
           <MobileNav />
@@ -75,7 +75,16 @@ export default function Layout() {
       <div className="flex min-h-svh flex-col">
         <SiteHeader />
 
-        <main className="flex min-h-0 flex-1 flex-col">
+        <main className="flex min-h-0 flex-1 flex-col relative z-0">
+          {/* Efek warna-warni elegan (Subtle Mesh/Aurora) untuk halaman dokumentasi */}
+          {!isHome && (
+            <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+              <div className="absolute -top-40 -left-40 w-96 h-96 bg-purple-500/15 dark:bg-purple-600/15 rounded-full mix-blend-multiply dark:mix-blend-screen blur-3xl opacity-70" />
+              <div className="absolute top-0 right-0 w-125 h-125 bg-cyan-400/10 dark:bg-cyan-500/10 rounded-full mix-blend-multiply dark:mix-blend-screen blur-3xl opacity-70" />
+              <div className="absolute top-40 left-1/2 -translate-x-1/2 w-200 h-100 bg-pink-400/10 dark:bg-pink-500/10 rounded-full mix-blend-multiply dark:mix-blend-screen blur-3xl opacity-50" />
+            </div>
+          )}
+
           {isHome ? (
             <Outlet />
           ) : (

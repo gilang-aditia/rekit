@@ -38,7 +38,7 @@ export default function CardPage() {
 
   export function CardDemo() {
   return (
-    <Card className="w-[350px]">
+    <Card className="w-87.5">
       <CardHeader>
         <CardTitle>Buat Project</CardTitle>
         <CardDescription>Deploy project baru kamu dalam satu klik.</CardDescription>
@@ -54,7 +54,7 @@ export default function CardPage() {
   )
   }`}
         >
-          <Card className="w-[350px]">
+          <Card className="w-87.5">
             <CardHeader>
               <CardTitle>Buat Project</CardTitle>
               <CardDescription>Deploy project baru kamu dalam satu klik.</CardDescription>

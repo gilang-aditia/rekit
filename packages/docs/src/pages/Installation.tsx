@@ -8,68 +8,79 @@ export default function Installation() {
       <div className="flex flex-col gap-2">
         <h1 className="scroll-m-24 text-3xl font-semibold tracking-tight">Installation</h1>
         <p className="text-balance text-[1.05rem] text-muted-foreground sm:text-base">
-          Panduan memulai untuk menggunakan Rakit UI di project kamu.
+          Panduan langkah demi langkah menggunakan Rakit UI di project kamu (sangat direkomendasikan untuk pemula).
         </p>
       </div>
 
-      <H2>Prasyarat</H2>
+      <H2>Cara Install Rakit UI</H2>
       <p className="text-muted-foreground">
-        Komponen Rakit UI ditulis dengan sintaks Tailwind CSS v4 — misalnya{' '}
-        <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">p-(--card-spacing)</code>{' '}
-        dan <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">ring-3</code>. Di Tailwind v3
-        class seperti ini tidak akan ter-generate, jadi pastikan project kamu memakai v4.
+        Rakit UI didesain khusus untuk Tailwind CSS v4. Berikut adalah cara paling mudah mengaturnya dari nol menggunakan Vite & React.
+      </p>
+
+      <H3>1. Buat Project Baru (Opsional)</H3>
+      <p className="text-muted-foreground">
+        Lewati langkah ini jika kamu sudah punya project React (Vite). Jika belum, jalankan perintah ini di terminal:
       </p>
       <InstallTabs
         items={{
-          npm: 'npm install -D tailwindcss@^4 @tailwindcss/vite@^4',
-          pnpm: 'pnpm add -D tailwindcss@^4 @tailwindcss/vite@^4',
-          yarn: 'yarn add -D tailwindcss@^4 @tailwindcss/vite@^4',
-          bun: 'bun add -D tailwindcss@^4 @tailwindcss/vite@^4',
+          npm: 'npm create vite@latest my-app -- --template react-ts\ncd my-app\nnpm install',
+          pnpm: 'pnpm create vite@latest my-app --template react-ts\ncd my-app\npnpm install',
+          yarn: 'yarn create vite my-app --template react-ts\ncd my-app\nyarn install',
+          bun: 'bun create vite my-app --template react-ts\ncd my-app\nbun install',
         }}
       />
+
+      <H3>2. Install Tailwind CSS v4 & Path Alias</H3>
       <p className="text-muted-foreground">
-        Tailwind v4 tidak lagi memakai <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">tailwind.config.js</code>{' '}
-        maupun PostCSS. Daftarkan plugin-nya di Vite:
+        Rakit UI butuh Tailwind CSS v4 dan pengaturan alias <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">@/</code> untuk import file. Install library berikut:
       </p>
-      <CodeBlock
-        code={`import { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\nimport tailwindcss from '@tailwindcss/vite'\n\nexport default defineConfig({\n  plugins: [react(), tailwindcss()],\n})`}
+      <InstallTabs
+        items={{
+          npm: 'npm install -D tailwindcss@^4 @tailwindcss/vite@^4 @types/node',
+          pnpm: 'pnpm add -D tailwindcss@^4 @tailwindcss/vite@^4 @types/node',
+          yarn: 'yarn add -D tailwindcss@^4 @tailwindcss/vite@^4 @types/node',
+          bun: 'bun add -D tailwindcss@^4 @tailwindcss/vite@^4 @types/node',
+        }}
       />
 
-      <H2>Instalasi</H2>
+      <H3>3. Ubah File Konfigurasi Vite & TypeScript</H3>
       <p className="text-muted-foreground">
-        Rakit UI bukan package npm yang kamu install lalu import komponennya begitu saja. Konsepnya
-        adalah menyalin source code langsung ke project kamu lewat CLI, sehingga kamu punya kendali
-        penuh atas kode komponen — sama seperti shadcn/ui.
+        Agar Vite mengerti Tailwind v4 dan import dengan awalan <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">@/</code>, buka file <strong className="text-foreground">vite.config.ts</strong> di folder project kamu, lalu ganti isinya dengan ini:
       </p>
+      <CodeBlock
+        code={`import path from "path"\nimport { defineConfig } from 'vite'\nimport react from '@vitejs/plugin-react'\nimport tailwindcss from '@tailwindcss/vite'\n\nexport default defineConfig({\n  plugins: [react(), tailwindcss()],\n  resolve: {\n    alias: {\n      "@": path.resolve(__dirname, "./src"),\n    },\n  },\n})`}
+      />
 
-      <H3>1. Inisialisasi project</H3>
+      <p className="text-muted-foreground mt-4">
+        Lalu, buka file <strong className="text-foreground">tsconfig.app.json</strong> (atau <strong className="text-foreground">tsconfig.json</strong>), tambahkan pengaturan <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">baseUrl</code> dan <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">paths</code> di dalam bagian <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">compilerOptions</code>:
+      </p>
+      <CodeBlock
+        language="json"
+        code={`{\n  "compilerOptions": {\n    // ... pengaturan bawaan lainnya tetap biarkan\n    "baseUrl": ".",\n    "paths": {\n      "@/*": ["./src/*"]\n    }\n  }\n}`}
+      />
+
+      <H3>4. Inisialisasi Rakit UI</H3>
       <p className="text-muted-foreground">
-        Perintah <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">init</code> membuat{' '}
-        <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">components.json</code>, utility{' '}
-        <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">cn</code>, dan menyalin{' '}
-        <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">styles.css</code> berisi seluruh
-        token tema langsung dari library.
+        Jalankan perintah ini untuk membuat konfigurasi otomatis (<code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">components.json</code>) dan menyalin file CSS bawaan Rakit UI.
       </p>
       <InstallTabs cliCommand="init" />
 
-      <H3>2. Import CSS-nya</H3>
+      <H3>5. Import CSS ke Aplikasi</H3>
       <p className="text-muted-foreground">
-        Panggil file CSS tadi dari entry point aplikasi kamu.
+        Buka file <strong className="text-foreground">src/main.tsx</strong> (atau <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">src/index.tsx</code>). Hapus import css bawaan seperti <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">import './index.css'</code>, dan ganti dengan:
       </p>
       <CodeBlock code={`import './styles.css'`} />
 
-      <H3>3. Tambahkan komponen</H3>
+      <H3>6. Selesai! Saatnya Tambah Komponen</H3>
       <p className="text-muted-foreground">
-        CLI menyalin kode komponen ke folder lokal kamu beserta dependency yang diperlukan.
+        Kini project kamu sudah siap. Mari coba tambahkan komponen <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">button</code>:
       </p>
-      <InstallTabs cliCommand="add button card" />
-
-      <H3>4. Gunakan komponen</H3>
-      <p className="text-muted-foreground">
-        Setelah disalin, kodenya milik kamu — bebas diubah sesuai kebutuhan.
+      <InstallTabs cliCommand="add button" />
+      <p className="text-muted-foreground mt-4">
+        Gunakan langsung komponennya di kodemu! Karena source codenya disalin ke foldermu (<code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">src/components/ui/button.tsx</code>), kamu bebas memodifikasinya!
       </p>
       <CodeBlock
-        code={`import { Button } from "@/components/ui/button"\n\nexport default function App() {\n  return <Button>Click me</Button>\n}`}
+        code={`import { Button } from "@/components/ui/button"\n\nexport default function App() {\n  return (\n    <div className="p-8">\n      <Button>Click me</Button>\n    </div>\n  )\n}`}
       />
     </>
   );

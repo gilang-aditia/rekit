@@ -27,8 +27,8 @@ export default function SearchInputPage() {
   return <SearchInput placeholder="Cari data..." />
   }`}
         >
-          <div className="w-[350px]">
-            <SearchInput placeholder="Cari data..." />
+          <div className="w-87.5">
+            <SearchInput placeholder="Search items..." className="w-87.5" />
           </div>
         </ComponentPreview>
       </div>

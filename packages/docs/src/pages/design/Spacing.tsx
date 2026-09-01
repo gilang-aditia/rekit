@@ -75,6 +75,76 @@ export default function DesignSpacing() {
         <strong>tetap sama</strong>. Yang membesar cuma teksnya. Jadi rancang kartu dan baris daftar
         supaya tingginya bisa memanjang, bukan terkunci pada satu angka.
       </Catatan>
+
+      <H2>Cara Mengatur Spacing di Figma</H2>
+      <p className="text-muted-foreground">
+        Gunakan fitur Auto Layout untuk mengatur jarak antar elemen secara konsisten. Berikut gambaran panel Auto Layout di Figma:
+      </p>
+
+      {/* Visual: Figma Auto Layout Panel Mockup */}
+      <div className="my-4 flex flex-col sm:flex-row gap-6 items-start rounded-xl border p-5">
+        <div className="w-full max-w-xs overflow-hidden rounded-lg border bg-background text-xs shadow-xs">
+          <div className="border-b px-3 py-2 font-medium flex items-center justify-between">
+            Auto layout
+            <span className="text-muted-foreground">↓ Vertical</span>
+          </div>
+          <div className="p-3 flex flex-col gap-3">
+            <div className="flex items-center gap-3">
+              <div className="flex flex-col items-center gap-0.5">
+                <div className="flex items-center gap-1">
+                  <span className="text-muted-foreground text-[10px]">↕</span>
+                  <span className="font-mono">16</span>
+                </div>
+                <span className="text-[10px] text-muted-foreground">Padding atas/bawah</span>
+              </div>
+              <div className="flex flex-col items-center gap-0.5">
+                <div className="flex items-center gap-1">
+                  <span className="text-muted-foreground text-[10px]">↔</span>
+                  <span className="font-mono">16</span>
+                </div>
+                <span className="text-[10px] text-muted-foreground">Padding kiri/kanan</span>
+              </div>
+            </div>
+            <div className="border-t pt-2 flex items-center justify-between">
+              <span className="text-muted-foreground">Gap between items</span>
+              <span className="font-mono">8</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Visual: Card with spacing annotations */}
+        <div className="flex-1 flex flex-col items-center gap-3">
+          <div className="relative rounded-xl border-2 border-dashed border-primary/40 p-0">
+            {/* Top padding indicator */}
+            <div className="flex items-center justify-center h-4 bg-primary/10 rounded-t-lg">
+              <span className="text-[9px] font-mono text-primary">16dp</span>
+            </div>
+            <div className="flex">
+              {/* Left padding indicator */}
+              <div className="flex items-center justify-center w-8 bg-primary/10">
+                <span className="text-[9px] font-mono text-primary -rotate-90">16dp</span>
+              </div>
+              {/* Content */}
+              <div className="flex flex-col gap-2 p-1">
+                <div className="h-4 w-32 rounded bg-muted" />
+                <div className="flex items-center justify-center h-2 bg-orange-500/15 rounded">
+                  <span className="text-[8px] font-mono text-orange-600">gap 8dp</span>
+                </div>
+                <div className="h-4 w-24 rounded bg-muted" />
+              </div>
+              {/* Right padding indicator */}
+              <div className="flex items-center justify-center w-8 bg-primary/10">
+                <span className="text-[9px] font-mono text-primary -rotate-90">16dp</span>
+              </div>
+            </div>
+            {/* Bottom padding indicator */}
+            <div className="flex items-center justify-center h-4 bg-primary/10 rounded-b-lg">
+              <span className="text-[9px] font-mono text-primary">16dp</span>
+            </div>
+          </div>
+          <span className="text-xs text-muted-foreground">Kartu dengan padding 16dp dan gap 8dp</span>
+        </div>
+      </div>
     </>
   )
 }
