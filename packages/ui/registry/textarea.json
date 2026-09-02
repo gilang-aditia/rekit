@@ -1,0 +1,9 @@
+{
+  "name": "textarea",
+  "type": "components:ui",
+  "description": "Menampilkan input teks multiline.",
+  "files": ["src/components/ui/textarea.tsx"],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "tabs",
+  "type": "components:ui",
+  "description": "Seperangkat tab.",
+  "files": ["src/components/ui/tabs.tsx"],
+  "dependencies": ["@radix-ui/react-tabs"],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}

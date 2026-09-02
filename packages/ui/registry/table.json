@@ -1,0 +1,9 @@
+{
+  "name": "table",
+  "type": "components:ui",
+  "description": "Tabel data yang responsif.",
+  "files": ["src/components/ui/table.tsx"],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}

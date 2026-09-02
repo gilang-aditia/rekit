@@ -1,0 +1,9 @@
+{
+  "name": "popover",
+  "type": "components:ui",
+  "description": "Menampilkan konten overlay popover.",
+  "files": ["src/components/ui/popover.tsx"],
+  "dependencies": ["@radix-ui/react-popover"],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}

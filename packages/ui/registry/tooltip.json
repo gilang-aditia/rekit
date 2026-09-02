@@ -1,0 +1,9 @@
+{
+  "name": "tooltip",
+  "type": "components:ui",
+  "description": "Popup informasi yang muncul saat elemen difokuskan atau disorot.",
+  "files": ["src/components/ui/tooltip.tsx"],
+  "dependencies": ["@radix-ui/react-tooltip"],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}

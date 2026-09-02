@@ -1,0 +1,9 @@
+{
+  "name": "calendar",
+  "type": "components:ui",
+  "description": "Komponen kalender yang memungkinkan pengguna memilih tanggal.",
+  "files": ["src/components/ui/calendar.tsx"],
+  "dependencies": ["react-day-picker", "date-fns", "lucide-react"],
+  "devDependencies": [],
+  "registryDependencies": ["utils", "button"]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "skeleton",
+  "type": "components:ui",
+  "description": "Menampilkan tempat penampung saat konten sedang dimuat.",
+  "files": ["src/components/ui/skeleton.tsx"],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}

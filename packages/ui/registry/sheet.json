@@ -1,0 +1,9 @@
+{
+  "name": "sheet",
+  "type": "components:ui",
+  "description": "Panel overlay yang meluncur masuk dari tepi layar.",
+  "files": ["src/components/ui/sheet.tsx"],
+  "dependencies": ["@radix-ui/react-dialog", "lucide-react"],
+  "devDependencies": [],
+  "registryDependencies": ["utils"]
+}

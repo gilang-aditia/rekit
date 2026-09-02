@@ -1,0 +1,9 @@
+{
+  "name": "form",
+  "type": "components:ui",
+  "description": "Formulir yang dapat dikomposisikan dengan validasi dan tata letak yang diakses.",
+  "files": ["src/components/ui/form.tsx"],
+  "dependencies": ["@radix-ui/react-label", "@radix-ui/react-slot", "react-hook-form", "@hookform/resolvers", "zod"],
+  "devDependencies": [],
+  "registryDependencies": ["utils", "label"]
+}
