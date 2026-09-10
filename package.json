@@ -4,9 +4,9 @@
   "scripts": {
     "dev:docs": "pnpm --filter docs dev",
     "build:ui": "pnpm --filter rakit-ui build",
-    "build:cli": "pnpm --filter rakit-ui-cli build",
+    "build:cli": "pnpm --filter @moonblanck/rakit-ui build",
     "build:docs": "pnpm --filter docs build",
-    "build": "pnpm build:ui && pnpm build:docs"
+    "build": "pnpm build:ui && pnpm build:cli && pnpm build:docs"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

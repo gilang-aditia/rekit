@@ -3,6 +3,13 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 import dts from 'vite-plugin-dts';
+import pkg from './package.json';
+
+const externalDeps = [
+  ...Object.keys(pkg.dependencies || {}),
+  ...Object.keys(pkg.peerDependencies || {}),
+  /^@radix-ui\//
+];
 
 export default defineConfig({
   plugins: [
@@ -30,11 +37,13 @@ export default defineConfig({
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'class-variance-authority', 'clsx', 'tailwind-merge'],
+      external: externalDeps,
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+          'recharts': 'Recharts',
+          'sonner': 'Sonner'
         },
       },
     },

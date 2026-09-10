@@ -1,15 +1,20 @@
 #!/usr/bin/env node
 
+import { createRequire } from 'module';
 import { Command } from 'commander';
 import { initCommand } from './commands/init.js';
 import { addCommand } from './commands/add.js';
+
+const require = createRequire(import.meta.url);
+// package.json ada satu level di atas dist/index.js hasil bundle tsup.
+const { version } = require('../package.json') as { version: string };
 
 const program = new Command();
 
 program
   .name('rakit-ui')
   .description('CLI untuk menambahkan komponen Rakit UI ke project kamu.')
-  .version('0.0.1');
+  .version(version);
 
 program
   .command('init')
