@@ -44,6 +44,19 @@
   }
 }
 
+/* Drift lambat untuk preset gradient kategori Animated. */
+@keyframes grad-drift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 /* Mask fade atas/bawah untuk area sidebar yang bisa di-scroll. */
 @utility scroll-fade {
   --_fade: min(12%, calc(var(--spacing) * 10));

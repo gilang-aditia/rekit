@@ -24,10 +24,10 @@ export default function ProgressPage() {
           code={`import { Progress } from "@/components/ui/progress"
 
 export function ProgressDemo() {
-  return <Progress value={33} />
+  return <Progress value={33} className="w-[60%]" />
 }`}
         >
-          <div className="w-[60%]">
+          <div className="w-[60%] min-w-50">
             <Progress value={33} />
           </div>
         </ComponentPreview>

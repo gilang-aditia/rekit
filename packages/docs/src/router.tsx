@@ -8,6 +8,7 @@ import CLI from './pages/CLI'
 import Changelog from './pages/Changelog'
 import ComingSoon from './pages/ComingSoon'
 import ComponentsIndex from './pages/ComponentsIndex'
+import Gradients from './pages/Gradients'
 import DesignIndex from './pages/design/Index'
 import DesignHandoff from './pages/design/Handoff'
 import DesignLayout from './pages/design/Layout'
@@ -61,6 +62,7 @@ const pages: Record<string, RouteObject['element']> = {
   '/docs/components': <ComponentsIndex />,
   '/docs/installation': <Installation />,
   '/docs/theming': <Theming />,
+  '/docs/gradients': <Gradients />,
   '/docs/cli': <CLI />,
   '/docs/changelog': <Changelog />,
   '/docs/components/accordion': <AccordionPage />,
