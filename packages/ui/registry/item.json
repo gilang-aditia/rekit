@@ -1,0 +1,17 @@
+{
+  "name": "item",
+  "type": "components:ui",
+  "description": "Baris konten serbaguna dengan media, judul, deskripsi, dan aksi.",
+  "files": [
+    "src/components/ui/item.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority",
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "separator",
+    "utils"
+  ]
+}

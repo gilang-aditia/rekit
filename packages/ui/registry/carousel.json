@@ -1,0 +1,17 @@
+{
+  "name": "carousel",
+  "type": "components:ui",
+  "description": "Carousel untuk menampilkan konten dalam bentuk slide.",
+  "files": [
+    "src/components/ui/carousel.tsx"
+  ],
+  "dependencies": [
+    "embla-carousel-react",
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "utils"
+  ]
+}

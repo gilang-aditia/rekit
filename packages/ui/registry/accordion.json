@@ -2,8 +2,15 @@
   "name": "accordion",
   "type": "components:ui",
   "description": "Konten yang bisa diperluas dan dilipat secara vertikal.",
-  "files": ["src/components/ui/accordion.tsx"],
-  "dependencies": ["radix-ui", "lucide-react"],
+  "files": [
+    "src/components/ui/accordion.tsx"
+  ],
+  "dependencies": [
+    "lucide-react",
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

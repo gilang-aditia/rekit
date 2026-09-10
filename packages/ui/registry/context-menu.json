@@ -1,0 +1,16 @@
+{
+  "name": "context-menu",
+  "type": "components:ui",
+  "description": "Menu konteks yang muncul saat klik kanan.",
+  "files": [
+    "src/components/ui/context-menu.tsx"
+  ],
+  "dependencies": [
+    "lucide-react",
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

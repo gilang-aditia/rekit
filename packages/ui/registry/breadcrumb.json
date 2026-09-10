@@ -1,0 +1,16 @@
+{
+  "name": "breadcrumb",
+  "type": "components:ui",
+  "description": "Navigasi breadcrumb yang menampilkan hierarki halaman.",
+  "files": [
+    "src/components/ui/breadcrumb.tsx"
+  ],
+  "dependencies": [
+    "lucide-react",
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

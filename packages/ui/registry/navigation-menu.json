@@ -1,0 +1,17 @@
+{
+  "name": "navigation-menu",
+  "type": "components:ui",
+  "description": "Menu navigasi horizontal dengan dropdown konten.",
+  "files": [
+    "src/components/ui/navigation-menu.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority",
+    "lucide-react",
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "attachment",
+  "type": "components:ui",
+  "description": "Kartu berkas atau gambar di dalam percakapan, lengkap dengan metadata dan status unggahan.",
+  "files": [
+    "src/components/ui/attachment.tsx"
+  ],
+  "dependencies": [
+    "lucide-react",
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

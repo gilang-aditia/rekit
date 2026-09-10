@@ -2,8 +2,15 @@
   "name": "radio-group",
   "type": "components:ui",
   "description": "Sekumpulan tombol radio, di mana hanya satu tombol yang dapat dicentang pada satu waktu.",
-  "files": ["src/components/ui/radio-group.tsx"],
-  "dependencies": ["@radix-ui/react-radio-group", "lucide-react"],
+  "files": [
+    "src/components/ui/radio-group.tsx"
+  ],
+  "dependencies": [
+    "lucide-react",
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

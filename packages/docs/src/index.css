@@ -69,3 +69,12 @@
   );
   mask-repeat: no-repeat;
 }
+
+/* Bingkai hero untuk scene ThreeUI: mengisi viewport di bawah header sticky.
+   Komponen shader mengandalkan parent dengan tinggi eksplisit. */
+.shader-frame {
+  position: relative;
+  width: 100%;
+  height: calc(100svh - var(--header-height));
+  overflow: hidden;
+}

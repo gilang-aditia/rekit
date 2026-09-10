@@ -1,19 +1,19 @@
 import * as React from "react"
-import { Loader2 } from "lucide-react"
-import { cn } from "../../lib/utils"
+import { Loader2Icon } from "lucide-react"
 
-export interface SpinnerProps extends React.SVGAttributes<SVGSVGElement> {}
+import { cn } from "@/lib/utils"
 
-const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(
-  ({ className, ...props }, ref) => {
-    return (
-      <Loader2
-        ref={ref}
-        className={cn("animate-spin text-muted-foreground", className)}
-        {...props}
-      />
-    )
-  }
+const Spinner = React.forwardRef<SVGSVGElement, React.ComponentPropsWithoutRef<typeof Loader2Icon>>(
+  ({ className, ...props }, ref) => (
+    <Loader2Icon
+      ref={ref}
+      role="status"
+      aria-label="Memuat"
+      data-slot="spinner"
+      className={cn("size-4 shrink-0 animate-spin text-muted-foreground", className)}
+      {...props}
+    />
+  )
 )
 Spinner.displayName = "Spinner"
 

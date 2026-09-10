@@ -1,0 +1,23 @@
+{
+  "name": "sidebar",
+  "type": "components:ui",
+  "description": "Sidebar navigasi yang bisa diciutkan, lengkap dengan mode mobile.",
+  "files": [
+    "src/components/ui/sidebar.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority",
+    "lucide-react",
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "input",
+    "separator",
+    "sheet",
+    "skeleton",
+    "tooltip",
+    "utils"
+  ]
+}

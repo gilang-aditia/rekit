@@ -20,6 +20,27 @@ export default function DesignIndex() {
         merangkum angka yang berlaku, supaya kamu tidak perlu menebak.
       </Catatan>
 
+      <H2>Kalau baru mulai</H2>
+      <p className="text-muted-foreground">
+        Halaman fondasi di bawah berisi angka baku — dipakai saat kamu sudah tahu mau menggambar apa.
+        Kalau yang kamu cari justru urutan kerjanya, mulai dari dua halaman ini.
+      </p>
+      <div className="grid gap-2 sm:grid-cols-2">
+        {[
+          ['/design/workflow', 'Alur kerja', 'Tujuh tahap dari brief sampai spec, setup file, ukuran artboard, dan aturan boleh/tidak.'],
+          ['/design/prototype', 'Prototype', 'Seberapa dalam prototype perlu dibuat, gerakan mana yang bisa dibangun, dan cara mengujinya.'],
+        ].map(([href, judul, isi]) => (
+          <Link
+            key={href}
+            to={href}
+            className="flex flex-col gap-1 rounded-xl border p-4 transition-colors hover:bg-accent"
+          >
+            <span className="text-sm font-medium">{judul}</span>
+            <span className="text-xs text-muted-foreground">{isi}</span>
+          </Link>
+        ))}
+      </div>
+
       <H2>Fondasi</H2>
       <p className="text-muted-foreground">
         Enam halaman ini memuat semua angka baku. Baca berurutan kalau baru pertama kali, atau

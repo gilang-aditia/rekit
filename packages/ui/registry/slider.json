@@ -2,8 +2,14 @@
   "name": "slider",
   "type": "components:ui",
   "description": "Komponen input tempat pengguna memilih nilai dari dalam rentang tertentu.",
-  "files": ["src/components/ui/slider.tsx"],
-  "dependencies": ["@radix-ui/react-slider"],
+  "files": [
+    "src/components/ui/slider.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

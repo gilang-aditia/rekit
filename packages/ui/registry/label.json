@@ -2,8 +2,14 @@
   "name": "label",
   "type": "components:ui",
   "description": "Merender elemen HTML label yang mudah diakses dan terkait dengan kontrol formulir.",
-  "files": ["src/components/ui/label.tsx"],
-  "dependencies": ["@radix-ui/react-label"],
+  "files": [
+    "src/components/ui/label.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

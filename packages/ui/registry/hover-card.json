@@ -1,0 +1,15 @@
+{
+  "name": "hover-card",
+  "type": "components:ui",
+  "description": "Kartu popup yang muncul saat elemen disorot.",
+  "files": [
+    "src/components/ui/hover-card.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

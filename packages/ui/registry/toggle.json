@@ -1,0 +1,16 @@
+{
+  "name": "toggle",
+  "type": "components:ui",
+  "description": "Tombol dua keadaan (aktif/nonaktif).",
+  "files": [
+    "src/components/ui/toggle.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority",
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

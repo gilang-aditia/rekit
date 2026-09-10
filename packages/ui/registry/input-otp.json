@@ -1,0 +1,16 @@
+{
+  "name": "input-otp",
+  "type": "components:ui",
+  "description": "Input untuk memasukkan kode OTP satu per satu.",
+  "files": [
+    "src/components/ui/input-otp.tsx"
+  ],
+  "dependencies": [
+    "input-otp",
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

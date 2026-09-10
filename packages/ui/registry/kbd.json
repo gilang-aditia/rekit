@@ -1,0 +1,13 @@
+{
+  "name": "kbd",
+  "type": "components:ui",
+  "description": "Menampilkan tombol papan ketik dalam teks.",
+  "files": [
+    "src/components/ui/kbd.tsx"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

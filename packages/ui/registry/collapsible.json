@@ -1,0 +1,15 @@
+{
+  "name": "collapsible",
+  "type": "components:ui",
+  "description": "Konten yang bisa di-expand dan collapse secara interaktif.",
+  "files": [
+    "src/components/ui/collapsible.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

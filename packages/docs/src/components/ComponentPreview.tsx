@@ -36,15 +36,15 @@ export function ComponentPreview({
         <div data-slot="preview" dir="ltr">
           <div
             data-align={align}
-            className="preview relative flex h-72 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start"
+            className="preview relative flex min-h-87.5 w-full justify-center p-10 data-[align=center]:items-center data-[align=end]:items-end data-[align=start]:items-start"
           >
             <div className="flex flex-wrap items-center gap-2 md:flex-row">{children}</div>
           </div>
         </div>
 
         {code && (
-          <div className="relative border-t bg-code">
-            <div className={cn('relative', !expanded && 'max-h-72 overflow-hidden')}>
+          <div className="relative border-t bg-zinc-950 dark:bg-zinc-950">
+            <div className={cn('relative', !expanded && 'max-h-87.5 overflow-hidden')}>
               <CodeBlock code={code} language="tsx" bare />
             </div>
 
@@ -54,14 +54,14 @@ export function ComponentPreview({
                   className="absolute inset-0"
                   style={{
                     background:
-                      'linear-gradient(to top, var(--color-code), color-mix(in oklab, var(--color-code) 60%, transparent), transparent)',
+                      'linear-gradient(to top, #09090b, color-mix(in oklab, #09090b 80%, transparent), transparent)',
                   }}
                 />
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={() => setExpanded(true)}
-                  className="relative z-10 rounded-lg bg-background text-foreground shadow-none hover:bg-muted"
+                  className="relative z-10 rounded-lg bg-zinc-900 text-zinc-50 border-zinc-800 shadow-none hover:bg-zinc-800 hover:text-zinc-50"
                 >
                   View Code
                 </Button>
@@ -69,12 +69,12 @@ export function ComponentPreview({
             )}
 
             {expanded && (
-              <div className="flex justify-center pb-4">
+              <div className="flex justify-center pb-4 mt-2">
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={() => setExpanded(false)}
-                  className="rounded-lg bg-background text-foreground shadow-none hover:bg-muted"
+                  className="rounded-lg bg-zinc-900 text-zinc-50 border-zinc-800 shadow-none hover:bg-zinc-800 hover:text-zinc-50"
                 >
                   Collapse
                 </Button>

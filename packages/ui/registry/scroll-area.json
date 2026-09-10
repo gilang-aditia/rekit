@@ -1,0 +1,15 @@
+{
+  "name": "scroll-area",
+  "type": "components:ui",
+  "description": "Area konten bergulir dengan scrollbar kustom.",
+  "files": [
+    "src/components/ui/scroll-area.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

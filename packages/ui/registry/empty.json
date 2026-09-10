@@ -1,0 +1,15 @@
+{
+  "name": "empty",
+  "type": "components:ui",
+  "description": "Keadaan kosong dengan ikon, judul, penjelasan, dan aksi lanjutan.",
+  "files": [
+    "src/components/ui/empty.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

@@ -2,8 +2,15 @@
   "name": "alert-dialog",
   "type": "components:ui",
   "description": "Dialog modal peringatan yang menyela pengguna, memerlukan respons eksplisit.",
-  "files": ["src/components/ui/alert-dialog.tsx"],
-  "dependencies": ["@radix-ui/react-alert-dialog"],
+  "files": [
+    "src/components/ui/alert-dialog.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils", "button"]
+  "registryDependencies": [
+    "button",
+    "utils"
+  ]
 }

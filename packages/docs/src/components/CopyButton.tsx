@@ -20,7 +20,7 @@ export function CopyButton({ value, className }: { value: string; className?: st
         navigator.clipboard.writeText(value)
         setCopied(true)
       }}
-      className={cn('absolute top-3 right-2 z-10 size-7 bg-code hover:opacity-100', className)}
+      className={cn('absolute top-3 right-4 z-10 size-7 bg-zinc-900/50 text-zinc-400 hover:bg-zinc-800 hover:text-zinc-50', className)}
     >
       <span className="sr-only">Copy</span>
       {copied ? (

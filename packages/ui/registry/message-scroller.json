@@ -1,0 +1,16 @@
+{
+  "name": "message-scroller",
+  "type": "components:ui",
+  "description": "Wadah gulir percakapan yang mengikuti pesan baru dan menjaga posisi baca.",
+  "files": [
+    "src/components/ui/message-scroller.tsx"
+  ],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "utils"
+  ]
+}

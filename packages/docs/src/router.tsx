@@ -11,6 +11,9 @@ import ComponentsIndex from './pages/ComponentsIndex'
 import Gradients from './pages/Gradients'
 import DesignIndex from './pages/design/Index'
 import DesignHandoff from './pages/design/Handoff'
+import DesignUiKit from './pages/design/UiKit'
+import DesignWorkflow from './pages/design/Workflow'
+import DesignPrototype from './pages/design/Prototype'
 import DesignLayout from './pages/design/Layout'
 import DesignSpacing from './pages/design/Spacing'
 import DesignShape from './pages/design/Shape'
@@ -54,6 +57,39 @@ import CalendarPage from './pages/components/CalendarPage'
 import DatePickerPage from './pages/components/DatePickerPage'
 import FormPage from './pages/components/FormPage'
 import SliderPage from './pages/components/SliderPage'
+import AspectRatioPage from './pages/components/AspectRatioPage'
+import BreadcrumbPage from './pages/components/BreadcrumbPage'
+import CarouselPage from './pages/components/CarouselPage'
+import CollapsiblePage from './pages/components/CollapsiblePage'
+import ComboboxPage from './pages/components/ComboboxPage'
+import CommandPage from './pages/components/CommandPage'
+import ContextMenuPage from './pages/components/ContextMenuPage'
+import DrawerPage from './pages/components/DrawerPage'
+import HoverCardPage from './pages/components/HoverCardPage'
+import InputOTPPage from './pages/components/InputOTPPage'
+import MenubarPage from './pages/components/MenubarPage'
+import NavigationMenuPage from './pages/components/NavigationMenuPage'
+import PaginationPage from './pages/components/PaginationPage'
+import ResizablePage from './pages/components/ResizablePage'
+import ScrollAreaPage from './pages/components/ScrollAreaPage'
+import TogglePage from './pages/components/TogglePage'
+import ToggleGroupPage from './pages/components/ToggleGroupPage'
+import AttachmentPage from './pages/components/AttachmentPage'
+import BubblePage from './pages/components/BubblePage'
+import ButtonGroupPage from './pages/components/ButtonGroupPage'
+import DataTablePage from './pages/components/DataTablePage'
+import DirectionPage from './pages/components/DirectionPage'
+import EmptyPage from './pages/components/EmptyPage'
+import InputGroupPage from './pages/components/InputGroupPage'
+import ItemPage from './pages/components/ItemPage'
+import KbdPage from './pages/components/KbdPage'
+import MarkerPage from './pages/components/MarkerPage'
+import MessagePage from './pages/components/MessagePage'
+import MessageScrollerPage from './pages/components/MessageScrollerPage'
+import NativeSelectPage from './pages/components/NativeSelectPage'
+import QuestionnairePage from './pages/components/QuestionnairePage'
+import SidebarPage from './pages/components/SidebarPage'
+import TypographyPage from './pages/components/TypographyPage'
 import { componentsNav, designNav, sectionsNav } from './lib/docs-nav'
 
 /** Halaman yang sudah ditulis, dipetakan dari path-nya di sidebar. */
@@ -97,6 +133,39 @@ const pages: Record<string, RouteObject['element']> = {
   '/docs/components/date-picker': <DatePickerPage />,
   '/docs/components/form': <FormPage />,
   '/docs/components/slider': <SliderPage />,
+  '/docs/components/aspect-ratio': <AspectRatioPage />,
+  '/docs/components/breadcrumb': <BreadcrumbPage />,
+  '/docs/components/carousel': <CarouselPage />,
+  '/docs/components/collapsible': <CollapsiblePage />,
+  '/docs/components/combobox': <ComboboxPage />,
+  '/docs/components/command': <CommandPage />,
+  '/docs/components/context-menu': <ContextMenuPage />,
+  '/docs/components/drawer': <DrawerPage />,
+  '/docs/components/hover-card': <HoverCardPage />,
+  '/docs/components/input-otp': <InputOTPPage />,
+  '/docs/components/menubar': <MenubarPage />,
+  '/docs/components/navigation-menu': <NavigationMenuPage />,
+  '/docs/components/pagination': <PaginationPage />,
+  '/docs/components/resizable': <ResizablePage />,
+  '/docs/components/scroll-area': <ScrollAreaPage />,
+  '/docs/components/toggle': <TogglePage />,
+  '/docs/components/toggle-group': <ToggleGroupPage />,
+  '/docs/components/attachment': <AttachmentPage />,
+  '/docs/components/bubble': <BubblePage />,
+  '/docs/components/button-group': <ButtonGroupPage />,
+  '/docs/components/data-table': <DataTablePage />,
+  '/docs/components/direction': <DirectionPage />,
+  '/docs/components/empty': <EmptyPage />,
+  '/docs/components/input-group': <InputGroupPage />,
+  '/docs/components/item': <ItemPage />,
+  '/docs/components/kbd': <KbdPage />,
+  '/docs/components/marker': <MarkerPage />,
+  '/docs/components/message': <MessagePage />,
+  '/docs/components/message-scroller': <MessageScrollerPage />,
+  '/docs/components/native-select': <NativeSelectPage />,
+  '/docs/components/questionnaire': <QuestionnairePage />,
+  '/docs/components/sidebar': <SidebarPage />,
+  '/docs/components/typography': <TypographyPage />,
 }
 
 // Setiap entri sidebar punya route-nya sendiri; yang belum digarap
@@ -110,6 +179,9 @@ const docsRoutes: RouteObject[] = [...sectionsNav, ...componentsNav].map((item) 
 const designPages: Record<string, RouteObject['element']> = {
   '/design': <DesignIndex />,
   '/design/handoff': <DesignHandoff />,
+  '/design/ui-kit': <DesignUiKit />,
+  '/design/workflow': <DesignWorkflow />,
+  '/design/prototype': <DesignPrototype />,
   '/design/layout': <DesignLayout />,
   '/design/spacing': <DesignSpacing />,
   '/design/shape': <DesignShape />,

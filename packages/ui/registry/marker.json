@@ -1,0 +1,15 @@
+{
+  "name": "marker",
+  "type": "components:ui",
+  "description": "Penanda di aliran percakapan: pembatas tanggal, catatan sistem, atau status.",
+  "files": [
+    "src/components/ui/marker.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

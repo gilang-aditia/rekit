@@ -2,8 +2,14 @@
   "name": "spinner",
   "type": "components:ui",
   "description": "Indikator loading animasi berputar.",
-  "files": ["src/components/ui/spinner.tsx"],
-  "dependencies": ["lucide-react"],
+  "files": [
+    "src/components/ui/spinner.tsx"
+  ],
+  "dependencies": [
+    "lucide-react"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

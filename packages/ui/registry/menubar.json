@@ -1,0 +1,16 @@
+{
+  "name": "menubar",
+  "type": "components:ui",
+  "description": "Menu bar horizontal bergaya desktop.",
+  "files": [
+    "src/components/ui/menubar.tsx"
+  ],
+  "dependencies": [
+    "lucide-react",
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "toggle-group",
+  "type": "components:ui",
+  "description": "Grup tombol toggle yang saling terkait.",
+  "files": [
+    "src/components/ui/toggle-group.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority",
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "toggle",
+    "utils"
+  ]
+}

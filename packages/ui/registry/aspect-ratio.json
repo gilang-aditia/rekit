@@ -1,0 +1,13 @@
+{
+  "name": "aspect-ratio",
+  "type": "components:ui",
+  "description": "Menampilkan konten dalam rasio aspek yang diinginkan.",
+  "files": [
+    "src/components/ui/aspect-ratio.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": []
+}

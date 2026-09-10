@@ -1,0 +1,15 @@
+{
+  "name": "message",
+  "type": "components:ui",
+  "description": "Tata letak satu baris percakapan: avatar, header, isi, dan footer.",
+  "files": [
+    "src/components/ui/message.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

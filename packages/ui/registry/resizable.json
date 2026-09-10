@@ -1,0 +1,16 @@
+{
+  "name": "resizable",
+  "type": "components:ui",
+  "description": "Panel yang bisa diubah ukurannya dengan drag.",
+  "files": [
+    "src/components/ui/resizable.tsx"
+  ],
+  "dependencies": [
+    "lucide-react",
+    "react-resizable-panels"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "name": "typography",
+  "type": "components:ui",
+  "description": "Skala tipografi konsisten untuk judul, paragraf, kutipan, dan kode.",
+  "files": [
+    "src/components/ui/typography.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority",
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

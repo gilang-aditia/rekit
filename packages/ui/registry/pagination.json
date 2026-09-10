@@ -1,0 +1,16 @@
+{
+  "name": "pagination",
+  "type": "components:ui",
+  "description": "Navigasi halaman dengan nomor dan tombol sebelumnya/berikutnya.",
+  "files": [
+    "src/components/ui/pagination.tsx"
+  ],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "utils"
+  ]
+}

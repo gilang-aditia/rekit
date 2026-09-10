@@ -2,8 +2,14 @@
   "name": "progress",
   "type": "components:ui",
   "description": "Menampilkan indikator untuk task yang sedang berjalan, biasanya digambarkan dengan progress bar.",
-  "files": ["src/components/ui/progress.tsx"],
-  "dependencies": ["@radix-ui/react-progress"],
+  "files": [
+    "src/components/ui/progress.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

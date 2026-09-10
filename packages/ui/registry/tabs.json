@@ -2,8 +2,14 @@
   "name": "tabs",
   "type": "components:ui",
   "description": "Seperangkat tab.",
-  "files": ["src/components/ui/tabs.tsx"],
-  "dependencies": ["@radix-ui/react-tabs"],
+  "files": [
+    "src/components/ui/tabs.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

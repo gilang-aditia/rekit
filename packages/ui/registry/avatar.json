@@ -2,8 +2,14 @@
   "name": "avatar",
   "type": "components:ui",
   "description": "Gambar profil pengguna dengan fallback.",
-  "files": ["src/components/ui/avatar.tsx"],
-  "dependencies": ["radix-ui"],
+  "files": [
+    "src/components/ui/avatar.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

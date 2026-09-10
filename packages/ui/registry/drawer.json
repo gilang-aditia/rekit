@@ -1,0 +1,15 @@
+{
+  "name": "drawer",
+  "type": "components:ui",
+  "description": "Panel yang meluncur dari bawah layar.",
+  "files": [
+    "src/components/ui/drawer.tsx"
+  ],
+  "dependencies": [
+    "vaul"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

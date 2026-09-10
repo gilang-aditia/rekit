@@ -1,0 +1,16 @@
+{
+  "name": "input-group",
+  "type": "components:ui",
+  "description": "Input yang dipadukan dengan ikon, label, atau tombol dalam satu bingkai.",
+  "files": [
+    "src/components/ui/input-group.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "button",
+    "utils"
+  ]
+}

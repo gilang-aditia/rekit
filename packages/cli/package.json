@@ -1,6 +1,6 @@
 {
   "name": "@moonblanck/rakit-ui",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "CLI untuk menambahkan komponen Rakit UI ke project kamu.",
   "license": "MIT",
   "repository": {

@@ -2,8 +2,15 @@
   "name": "checkbox",
   "type": "components:ui",
   "description": "Kontrol yang memungkinkan pengguna untuk beralih antara status dicentang atau tidak dicentang.",
-  "files": ["src/components/ui/checkbox.tsx"],
-  "dependencies": ["@radix-ui/react-checkbox", "lucide-react"],
+  "files": [
+    "src/components/ui/checkbox.tsx"
+  ],
+  "dependencies": [
+    "lucide-react",
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

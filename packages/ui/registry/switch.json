@@ -2,8 +2,14 @@
   "name": "switch",
   "type": "components:ui",
   "description": "Kontrol yang memungkinkan pengguna untuk mengaktifkan atau menonaktifkan suatu opsi.",
-  "files": ["src/components/ui/switch.tsx"],
-  "dependencies": ["@radix-ui/react-switch"],
+  "files": [
+    "src/components/ui/switch.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

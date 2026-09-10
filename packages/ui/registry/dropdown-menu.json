@@ -2,8 +2,15 @@
   "name": "dropdown-menu",
   "type": "components:ui",
   "description": "Menampilkan menu bagi pengguna—seperti aksi atau pilihan—yang muncul karena klik tombol.",
-  "files": ["src/components/ui/dropdown-menu.tsx"],
-  "dependencies": ["@radix-ui/react-dropdown-menu", "lucide-react"],
+  "files": [
+    "src/components/ui/dropdown-menu.tsx"
+  ],
+  "dependencies": [
+    "lucide-react",
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

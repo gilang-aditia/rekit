@@ -2,8 +2,14 @@
   "name": "separator",
   "type": "components:ui",
   "description": "Pemisah visual (garis).",
-  "files": ["src/components/ui/separator.tsx"],
-  "dependencies": ["@radix-ui/react-separator"],
+  "files": [
+    "src/components/ui/separator.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

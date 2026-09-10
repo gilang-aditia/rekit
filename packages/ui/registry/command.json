@@ -1,0 +1,17 @@
+{
+  "name": "command",
+  "type": "components:ui",
+  "description": "Palet perintah cepat bergaya command/search.",
+  "files": [
+    "src/components/ui/command.tsx"
+  ],
+  "dependencies": [
+    "cmdk",
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "dialog",
+    "utils"
+  ]
+}

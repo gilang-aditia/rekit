@@ -1,0 +1,16 @@
+{
+  "name": "bubble",
+  "type": "components:ui",
+  "description": "Permukaan visual satu pesan percakapan, dengan varian dan perataan kiri/kanan.",
+  "files": [
+    "src/components/ui/bubble.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority",
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

@@ -2,8 +2,15 @@
   "name": "button",
   "type": "components:ui",
   "description": "Tombol interaktif dengan berbagai varian dan ukuran.",
-  "files": ["src/components/ui/button.tsx"],
-  "dependencies": ["class-variance-authority", "radix-ui"],
+  "files": [
+    "src/components/ui/button.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority",
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

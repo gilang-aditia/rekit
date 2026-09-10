@@ -12,15 +12,10 @@ type CodeBlockProps = {
 }
 
 export function CodeBlock({ code, language = 'tsx', bare = false, className }: CodeBlockProps) {
-  const { theme } = useTheme()
-  const isDark =
-    theme === 'dark' ||
-    (theme === 'system' && window.matchMedia('(prefers-color-scheme: dark)').matches)
-
   return (
-    <figure className={cn('relative', !bare && 'overflow-hidden rounded-xl bg-code', className)}>
+    <figure className={cn('relative', !bare && 'overflow-hidden rounded-xl bg-zinc-950 text-zinc-50', className)}>
       <CopyButton value={code.trim()} />
-      <Highlight theme={isDark ? themes.vsDark : themes.github} code={code.trim()} language={language}>
+      <Highlight theme={themes.oneDark} code={code.trim()} language={language}>
         {({ className: prismClass, style, tokens, getLineProps, getTokenProps }) => (
           <pre
             className={cn(

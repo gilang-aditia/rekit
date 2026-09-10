@@ -2,8 +2,15 @@
   "name": "badge",
   "type": "components:ui",
   "description": "Label kecil untuk status atau kategori.",
-  "files": ["src/components/ui/badge.tsx"],
-  "dependencies": ["class-variance-authority"],
+  "files": [
+    "src/components/ui/badge.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority",
+    "radix-ui"
+  ],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

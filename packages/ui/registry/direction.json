@@ -1,0 +1,13 @@
+{
+  "name": "direction",
+  "type": "components:ui",
+  "description": "Menetapkan arah baca (ltr/rtl) untuk seluruh komponen di bawahnya.",
+  "files": [
+    "src/components/ui/direction.tsx"
+  ],
+  "dependencies": [
+    "radix-ui"
+  ],
+  "devDependencies": [],
+  "registryDependencies": []
+}

@@ -1,0 +1,16 @@
+{
+  "name": "button-group",
+  "type": "components:ui",
+  "description": "Mengelompokkan beberapa tombol menjadi satu kesatuan kontrol.",
+  "files": [
+    "src/components/ui/button-group.tsx"
+  ],
+  "dependencies": [
+    "class-variance-authority"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "separator",
+    "utils"
+  ]
+}

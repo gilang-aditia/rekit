@@ -1,0 +1,15 @@
+{
+  "name": "native-select",
+  "type": "components:ui",
+  "description": "Select bawaan browser untuk menu asli platform.",
+  "files": [
+    "src/components/ui/native-select.tsx"
+  ],
+  "dependencies": [
+    "lucide-react"
+  ],
+  "devDependencies": [],
+  "registryDependencies": [
+    "utils"
+  ]
+}

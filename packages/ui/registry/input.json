@@ -2,8 +2,12 @@
   "name": "input",
   "type": "components:ui",
   "description": "Input field untuk form.",
-  "files": ["src/components/ui/input.tsx"],
+  "files": [
+    "src/components/ui/input.tsx"
+  ],
   "dependencies": [],
   "devDependencies": [],
-  "registryDependencies": ["utils"]
+  "registryDependencies": [
+    "utils"
+  ]
 }

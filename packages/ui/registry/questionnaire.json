@@ -1,0 +1,15 @@
+{
+  "name": "questionnaire",
+  "type": "components:ui",
+  "description": "Daftar pertanyaan berurutan dengan pilihan jawaban.",
+  "files": [
+    "src/components/ui/questionnaire.tsx"
+  ],
+  "dependencies": [],
+  "devDependencies": [],
+  "registryDependencies": [
+    "label",
+    "radio-group",
+    "utils"
+  ]
+}
