@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from 'rakit-ui';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@rakit-ui/library';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';
 

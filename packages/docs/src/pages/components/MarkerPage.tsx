@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { Marker, MarkerLabel, MarkerShimmer } from 'rakit-ui';
+import { Marker, MarkerLabel, MarkerShimmer } from '@rakit-ui/library';
 import { SparklesIcon } from 'lucide-react';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';

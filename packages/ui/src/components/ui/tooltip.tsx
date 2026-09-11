@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Tooltip as TooltipPrimitive } from "radix-ui"
+import { Tooltip as TooltipPrimitive } from "@moonblanck/rakit-ui"
 
 import { cn } from "@/lib/utils"
 

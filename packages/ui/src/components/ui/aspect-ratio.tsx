@@ -1,5 +1,5 @@
 import * as React from "react"
-import { AspectRatio as AspectRatioPrimitive } from "radix-ui"
+import { AspectRatio as AspectRatioPrimitive } from "@moonblanck/rakit-ui"
 
 const AspectRatio = React.forwardRef<
   React.ElementRef<typeof AspectRatioPrimitive.Root>,

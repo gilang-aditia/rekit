@@ -6,7 +6,7 @@
     "src/components/ui/scroll-area.tsx"
   ],
   "dependencies": [
-    "radix-ui"
+    "@moonblanck/rakit-ui"
   ],
   "devDependencies": [],
   "registryDependencies": [

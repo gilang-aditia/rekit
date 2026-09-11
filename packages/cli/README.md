@@ -27,9 +27,22 @@ npx @moonblanck/rakit-ui@latest add card
 
 ## Kenapa Rakit UI?
 
-Berbeda dengan library komponen tradisional yang diinstal sebagai dependency di `package.json`, Rakit UI memberikan Anda **kepemilikan penuh (ownership)** atas kode komponen.
+Berbeda dengan library komponen tradisional, Rakit UI memberikan Anda **kepemilikan penuh (ownership)** atas kode komponen.
 
 CLI akan menyalin source code (misalnya `button.tsx`) langsung ke dalam proyek Anda, sehingga Anda bebas untuk mengubah desain, animasi, atau fungsionalitasnya tanpa ada batasan dari library eksternal.
+
+### Satu-satunya dependency: paket ini sendiri
+
+Komponen yang disalin mengimpor primitive headless-nya dari paket yang sama:
+
+```tsx
+import { Slot } from "@moonblanck/rakit-ui"
+```
+
+Paket itulah yang muncul di `package.json` Anda, dan CLI menginstalnya otomatis
+saat Anda menjalankan `add`. Isinya tipis — hanya lapisan primitive aksesibel
+(Dialog, Select, Dropdown, dan seterusnya) yang dipakai bersama oleh komponen.
+Sisanya, yaitu tampilan dan perilakunya, ada di file `.tsx` milik Anda sendiri.
 
 ## Dukungan
 

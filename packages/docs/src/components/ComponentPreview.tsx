@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button } from 'rakit-ui'
+import { Button } from '@rakit-ui/library'
 import { CodeBlock } from './CodeBlock'
 import { cn } from '@/lib/utils'
 

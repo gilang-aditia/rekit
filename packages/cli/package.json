@@ -1,7 +1,7 @@
 {
   "name": "@moonblanck/rakit-ui",
-  "version": "0.0.8",
-  "description": "CLI untuk menambahkan komponen Rakit UI ke project kamu.",
+  "version": "0.2.0",
+  "description": "Komponen UI Rakit UI: CLI penyalin komponen sekaligus primitive headless-nya.",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -16,23 +16,41 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts --clean && npm run copy-ui",
+    "build": "rm -rf dist && tsup && npm run copy-ui",
     "copy-ui": "rm -rf dist/ui && mkdir -p dist/ui/registry dist/ui/src && cp -R ../ui/registry/. dist/ui/registry/ && cp -R ../ui/src/. dist/ui/src/",
-    "dev": "tsup src/index.ts --format esm --dts --watch",
+    "dev": "tsup --watch",
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "commander": "^12.0.0",
-    "chalk": "^5.3.0",
-    "ora": "^8.0.0",
-    "prompts": "^2.4.2",
-    "fs-extra": "^11.2.0",
-    "execa": "^8.0.0"
+    "radix-ui": "^1.6.7"
   },
   "devDependencies": {
     "@types/fs-extra": "^11.0.0",
     "@types/prompts": "^2.4.0",
+    "chalk": "^5.3.0",
+    "commander": "^12.0.0",
+    "execa": "^8.0.0",
+    "fs-extra": "^11.2.0",
+    "ora": "^8.0.0",
+    "prompts": "^2.4.2",
     "tsup": "^8.0.0",
     "typescript": "^5.2.2"
+  },
+  "main": "./dist/primitives.js",
+  "types": "./dist/primitives.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/primitives.d.ts",
+      "import": "./dist/primitives.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0 || ^19.0.0",
+    "react-dom": "^18.2.0 || ^19.0.0"
   }
 }

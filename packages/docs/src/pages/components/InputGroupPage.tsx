@@ -5,7 +5,7 @@ import {
   InputGroupButton,
   InputGroupInput,
   InputGroupText,
-} from 'rakit-ui';
+} from '@rakit-ui/library';
 import { SearchIcon, XIcon } from 'lucide-react';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';

@@ -7,7 +7,7 @@
   ],
   "dependencies": [
     "@hookform/resolvers",
-    "radix-ui",
+    "@moonblanck/rakit-ui",
     "react-hook-form",
     "zod"
   ],

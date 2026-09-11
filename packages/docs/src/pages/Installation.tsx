@@ -82,6 +82,27 @@ export default function Installation() {
       <CodeBlock
         code={`import { Button } from "@/components/ui/button"\n\nexport default function App() {\n  return (\n    <div className="p-8">\n      <Button>Click me</Button>\n    </div>\n  )\n}`}
       />
+
+      <H2>Apa yang masuk ke package.json?</H2>
+      <p className="text-muted-foreground">
+        CLI hanya memasang apa yang benar-benar dibutuhkan komponen yang kamu tambahkan. Setelah
+        mengikuti langkah di atas, bagian <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">dependencies</code> kamu kira-kira seperti ini:
+      </p>
+      <CodeBlock
+        language="json"
+        code={`{\n  "dependencies": {\n    "@moonblanck/rakit-ui": "^0.2.0",\n    "class-variance-authority": "^0.7.1",\n    "clsx": "^2.1.1",\n    "tailwind-merge": "^3.6.0",\n    "tw-animate-css": "^1.4.0"\n  }\n}`}
+      />
+      <p className="text-muted-foreground mt-4">
+        <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">@moonblanck/rakit-ui</code> berisi primitive headless yang dipakai komponen.
+        Paket yang sama juga menyediakan CLI-nya, jadi tidak ada paket kedua yang perlu kamu urus.
+        Sisanya utilitas kecil: <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">clsx</code> dan <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">tailwind-merge</code> untuk fungsi <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">cn()</code>,
+        <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">class-variance-authority</code> untuk variant, dan <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">tw-animate-css</code> untuk animasi
+        yang dipakai komponen seperti dialog dan dropdown.
+      </p>
+      <p className="text-muted-foreground mt-4">
+        Komponen yang memakai ikon juga akan menarik <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">lucide-react</code>, dan beberapa komponen
+        lain punya kebutuhan sendiri — CLI menampilkan apa saja yang dipasang setiap kali kamu menjalankan <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">add</code>.
+      </p>
     </>
   );
 }

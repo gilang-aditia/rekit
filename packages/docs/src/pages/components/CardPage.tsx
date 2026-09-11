@@ -1,6 +1,6 @@
 import { H2 } from '@/components/DocsHeading';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from 'rakit-ui';
-import { Button } from 'rakit-ui';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@rakit-ui/library';
+import { Button } from '@rakit-ui/library';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';
 

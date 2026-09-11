@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Slot } from "radix-ui"
+import { Slot } from "@moonblanck/rakit-ui"
 import { FileIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"

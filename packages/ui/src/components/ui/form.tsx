@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Label as LabelPrimitive, Slot } from "radix-ui"
+import { Label as LabelPrimitive, Slot } from "@moonblanck/rakit-ui"
 import {
   Controller,
   FormProvider,

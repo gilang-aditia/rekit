@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from 'rakit-ui';
+import { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator } from '@rakit-ui/library';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';
 

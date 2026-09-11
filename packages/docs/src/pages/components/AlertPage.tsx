@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { Alert, AlertDescription, AlertTitle } from 'rakit-ui';
+import { Alert, AlertDescription, AlertTitle } from '@rakit-ui/library';
 import { Terminal, AlertCircle } from 'lucide-react';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';

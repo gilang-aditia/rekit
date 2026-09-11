@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { Button, Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from 'rakit-ui';
+import { Button, Empty, EmptyContent, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from '@rakit-ui/library';
 import { InboxIcon } from 'lucide-react';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';

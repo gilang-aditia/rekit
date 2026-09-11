@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Separator as SeparatorPrimitive } from "radix-ui"
+import { Separator as SeparatorPrimitive } from "@moonblanck/rakit-ui"
 
 import { cn } from "@/lib/utils"
 

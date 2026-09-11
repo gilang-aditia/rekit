@@ -7,7 +7,7 @@
   ],
   "dependencies": [
     "lucide-react",
-    "radix-ui"
+    "@moonblanck/rakit-ui"
   ],
   "devDependencies": [],
   "registryDependencies": [

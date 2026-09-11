@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { Calendar } from 'rakit-ui';
+import { Calendar } from '@rakit-ui/library';
 import * as React from 'react';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';

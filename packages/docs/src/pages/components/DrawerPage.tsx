@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { Button } from 'rakit-ui';
+import { Button } from '@rakit-ui/library';
 import {
   Drawer,
   DrawerClose,
@@ -9,7 +9,7 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from 'rakit-ui';
+} from '@rakit-ui/library';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';
 

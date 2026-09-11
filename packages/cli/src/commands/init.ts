@@ -4,6 +4,7 @@ import chalk from 'chalk';
 import ora from 'ora';
 import prompts from 'prompts';
 import { getSourceDir } from '../registry.js';
+import { installDeps } from '../utils/package-manager.js';
 
 const DEFAULT_CONFIG = {
   $schema: 'https://rakit-ui.dev/schema.json',
@@ -75,6 +76,18 @@ export async function initCommand(options: { yes: boolean; cwd: string }) {
       console.log(chalk.green('  ✔ src/styles.css dibuat.'));
     } else {
       console.log(chalk.dim('  ℹ src/styles.css sudah ada, skip.'));
+    }
+
+    // styles.css meng-import "tw-animate-css". Tanpa paketnya terpasang, Tailwind v4
+    // gagal me-resolve import itu dan SELURUH CSS tidak ter-compile — komponen
+    // tampil tanpa style sama sekali. 12 komponen memakai animate-in/animate-out.
+    const animSpinner = ora('Menginstall tw-animate-css...').start();
+    try {
+      await installDeps(cwd, ['tw-animate-css']);
+      animSpinner.succeed('tw-animate-css terinstall.');
+    } catch {
+      animSpinner.fail('Gagal install tw-animate-css.');
+      console.log(chalk.yellow('  Install secara manual: tw-animate-css'));
     }
 
     console.log('');

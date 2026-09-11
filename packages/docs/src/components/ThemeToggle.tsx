@@ -1,5 +1,5 @@
 import { useTheme } from './ThemeProvider'
-import { Button } from 'rakit-ui'
+import { Button } from '@rakit-ui/library'
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()

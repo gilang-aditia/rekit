@@ -2,7 +2,7 @@ import * as React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { cn } from '@/lib/utils'
 import { designNav, docsNav, mainNav } from '@/lib/docs-nav'
-import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from 'rakit-ui'
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetHeader } from '@rakit-ui/library'
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)

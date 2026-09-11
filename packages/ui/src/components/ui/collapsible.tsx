@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Collapsible as CollapsiblePrimitive } from "radix-ui"
+import { Collapsible as CollapsiblePrimitive } from "@moonblanck/rakit-ui"
 
 import { cn } from "@/lib/utils"
 

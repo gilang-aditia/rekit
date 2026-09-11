@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Popover as PopoverPrimitive } from "radix-ui"
+import { Popover as PopoverPrimitive } from "@moonblanck/rakit-ui"
 
 import { cn } from "@/lib/utils"
 

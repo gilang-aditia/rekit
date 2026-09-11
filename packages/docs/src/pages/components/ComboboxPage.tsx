@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { H2 } from '@/components/DocsHeading';
-import { Button } from 'rakit-ui';
+import { Button } from '@rakit-ui/library';
 import {
   Command,
   CommandEmpty,
@@ -8,8 +8,8 @@ import {
   CommandInput,
   CommandItem,
   CommandList,
-} from 'rakit-ui';
-import { Popover, PopoverContent, PopoverTrigger } from 'rakit-ui';
+} from '@rakit-ui/library';
+import { Popover, PopoverContent, PopoverTrigger } from '@rakit-ui/library';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';
 

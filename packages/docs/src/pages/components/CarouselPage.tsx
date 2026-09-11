@@ -1,12 +1,12 @@
 import { H2 } from '@/components/DocsHeading';
-import { Card, CardContent } from 'rakit-ui';
+import { Card, CardContent } from '@rakit-ui/library';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from 'rakit-ui';
+} from '@rakit-ui/library';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';
 

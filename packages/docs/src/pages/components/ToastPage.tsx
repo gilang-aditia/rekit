@@ -1,6 +1,6 @@
 import { H2 } from '@/components/DocsHeading';
-import { Button } from 'rakit-ui';
-import { Toaster } from 'rakit-ui';
+import { Button } from '@rakit-ui/library';
+import { Toaster } from '@rakit-ui/library';
 import { toast } from 'sonner';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';

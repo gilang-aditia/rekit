@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { Button, Calendar, Popover, PopoverContent, PopoverTrigger, cn } from 'rakit-ui';
+import { Button, Calendar, Popover, PopoverContent, PopoverTrigger, cn } from '@rakit-ui/library';
 import { format } from 'date-fns';
 import { Calendar as CalendarIcon } from 'lucide-react';
 import * as React from 'react';

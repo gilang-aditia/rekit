@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Menubar as MenubarPrimitive } from "radix-ui"
+import { Menubar as MenubarPrimitive } from "@moonblanck/rakit-ui"
 import { CheckIcon, ChevronRightIcon, CircleIcon } from "lucide-react"
 
 import { cn } from "@/lib/utils"

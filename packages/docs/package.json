@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "pnpm --filter rakit-ui build",
+    "prebuild": "pnpm --filter @moonblanck/rakit-ui build && pnpm --filter @rakit-ui/library build",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -13,13 +13,13 @@
     "@fontsource-variable/geist": "^5.3.0",
     "@fontsource-variable/geist-mono": "^5.3.0",
     "@hookform/resolvers": "^5.9.1",
+    "@rakit-ui/library": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^3.6.0",
     "framer-motion": "^13.1.1",
     "lucide-react": "^1.34.0",
     "prism-react-renderer": "^2.4.1",
-    "rakit-ui": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.87.0",

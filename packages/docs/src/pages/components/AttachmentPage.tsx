@@ -9,7 +9,7 @@ import {
   AttachmentPreview,
   AttachmentProgress,
   Button,
-} from 'rakit-ui';
+} from '@rakit-ui/library';
 import { DownloadIcon, FileTextIcon, ImageIcon } from 'lucide-react';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Button } from 'rakit-ui'
+import { Button } from '@rakit-ui/library'
 import { cn } from '@/lib/utils'
 
 export function CopyButton({ value, className }: { value: string; className?: string }) {

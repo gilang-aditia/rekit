@@ -1,5 +1,5 @@
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
-import { Button } from 'rakit-ui'
+import { Button } from '@rakit-ui/library'
 import Sidebar from './Sidebar'
 import { Toc } from './Toc'
 import { MobileNav } from './MobileNav'

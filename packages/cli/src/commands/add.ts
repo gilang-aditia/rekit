@@ -2,8 +2,8 @@ import fs from 'fs-extra';
 import path from 'path';
 import chalk from 'chalk';
 import ora from 'ora';
-import { execa } from 'execa';
 import { getRegistryDir, getSourceDir } from '../registry.js';
+import { installDeps } from '../utils/package-manager.js';
 
 interface RegistryItem {
   name: string;
@@ -121,20 +121,7 @@ export async function addCommand(
     const depSpinner = ora('Menginstall dependencies...').start();
 
     try {
-      // Detect package manager
-      const pm = detectPackageManager(cwd);
-      const depsArray = Array.from(allDeps);
-
-      if (pm === 'pnpm') {
-        await execa('pnpm', ['add', ...depsArray], { cwd });
-      } else if (pm === 'yarn') {
-        await execa('yarn', ['add', ...depsArray], { cwd });
-      } else if (pm === 'bun') {
-        await execa('bun', ['add', ...depsArray], { cwd });
-      } else {
-        await execa('npm', ['install', ...depsArray], { cwd });
-      }
-
+      await installDeps(cwd, Array.from(allDeps));
       depSpinner.succeed('Dependencies terinstall.');
     } catch (error) {
       depSpinner.fail('Gagal install dependencies.');
@@ -158,11 +145,4 @@ export async function addCommand(
     console.log(chalk.cyan(`  import { ${pascalName} } from '@/components/ui/${name}';`));
   }
   console.log('');
-}
-
-function detectPackageManager(cwd: string): string {
-  if (fs.existsSync(path.join(cwd, 'pnpm-lock.yaml'))) return 'pnpm';
-  if (fs.existsSync(path.join(cwd, 'yarn.lock'))) return 'yarn';
-  if (fs.existsSync(path.join(cwd, 'bun.lockb'))) return 'bun';
-  return 'npm';
 }

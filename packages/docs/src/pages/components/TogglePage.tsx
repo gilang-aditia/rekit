@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { Toggle } from 'rakit-ui';
+import { Toggle } from '@rakit-ui/library';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';
 

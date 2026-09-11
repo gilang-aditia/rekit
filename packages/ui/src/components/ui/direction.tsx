@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Direction as DirectionPrimitive } from "radix-ui"
+import { Direction as DirectionPrimitive } from "@moonblanck/rakit-ui"
 
 /**
  * Menetapkan arah baca (ltr/rtl) untuk seluruh komponen Radix di bawahnya.

@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { Checkbox, Label } from 'rakit-ui';
+import { Checkbox, Label } from '@rakit-ui/library';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';
 

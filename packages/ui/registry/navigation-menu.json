@@ -8,7 +8,7 @@
   "dependencies": [
     "class-variance-authority",
     "lucide-react",
-    "radix-ui"
+    "@moonblanck/rakit-ui"
   ],
   "devDependencies": [],
   "registryDependencies": [

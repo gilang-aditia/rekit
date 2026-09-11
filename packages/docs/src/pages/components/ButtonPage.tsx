@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { Button } from 'rakit-ui';
+import { Button } from '@rakit-ui/library';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';
 

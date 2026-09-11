@@ -9,7 +9,7 @@ import {
   ItemMedia,
   ItemSeparator,
   ItemTitle,
-} from 'rakit-ui';
+} from '@rakit-ui/library';
 import { FolderIcon } from 'lucide-react';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';

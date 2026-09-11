@@ -6,7 +6,7 @@
     "src/components/ui/avatar.tsx"
   ],
   "dependencies": [
-    "radix-ui"
+    "@moonblanck/rakit-ui"
   ],
   "devDependencies": [],
   "registryDependencies": [

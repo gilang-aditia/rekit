@@ -2,7 +2,7 @@ import { H2 } from '@/components/DocsHeading';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
-import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "rakit-ui"
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@rakit-ui/library"
 
 const chartData = [
   { month: "Januari", desktop: 186, mobile: 80 },

@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { AspectRatio } from 'rakit-ui';
+import { AspectRatio } from '@rakit-ui/library';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';
 

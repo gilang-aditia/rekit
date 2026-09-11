@@ -2,9 +2,22 @@
 
 Monorepo pnpm berisi:
 
-- `packages/ui` — library komponen React (base-nya shadcn/ui, style `radix-nova`)
+- `packages/cli` — **`@moonblanck/rakit-ui`**, satu-satunya paket yang diterbitkan ke
+  npm. Punya dua peran: `bin` untuk CLI (`npx @moonblanck/rakit-ui add button`) dan
+  entry library berisi primitive headless yang diimpor komponen hasil salinan
+- `packages/ui` — `@rakit-ui/library`, sumber komponen React dan registry
+  (base-nya shadcn/ui, style `radix-nova`). Privat, tidak pernah diterbitkan
 - `packages/docs` — situs dokumentasi (Vite + React Router)
-- `packages/cli` — CLI `rakit-ui` untuk menyalin komponen ke project lain
+
+Komponen mengimpor primitive-nya lewat `@moonblanck/rakit-ui`, bukan `radix-ui`.
+Nama tanpa scope `rakit-ui` tidak bisa dipakai: npm menolaknya karena dianggap
+terlalu mirip dengan `radix-ui` (proteksi typosquatting). Nama ber-scope bebas
+dari filter itu.
+
+Dependency CLI (`commander`, `execa`, `fs-extra`, dan seterusnya) **dibundel** oleh
+tsup ke dalam `dist/index.js`, sehingga satu-satunya dependency runtime paket ini
+adalah `radix-ui`. Tanpa itu, setiap aplikasi pengguna ikut memasang seluruh
+dependency CLI hanya untuk sebuah tombol.
 
 ## Prasyarat
 
@@ -19,10 +32,10 @@ tanpa `tailwind.config.js` dan tanpa PostCSS.
 
 ```bash
 pnpm dev:docs     # jalankan situs dokumentasi
-pnpm build:ui     # build library
+pnpm build:cli    # build paket terbit (CLI + primitives)
+pnpm build:ui     # build library internal
 pnpm build:docs   # build situs dokumentasi
-pnpm build:cli    # build CLI
-pnpm build        # build library + docs
+pnpm build        # build semua package
 ```
 
 ## Token tema

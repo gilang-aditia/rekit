@@ -1,5 +1,5 @@
 import { H2 } from '@/components/DocsHeading';
-import { Label, NativeSelect } from 'rakit-ui';
+import { Label, NativeSelect } from '@rakit-ui/library';
 import { ComponentPreview } from '../../components/ComponentPreview';
 import { InstallTabs } from '../../components/InstallTabs';
 

@@ -53,13 +53,13 @@ export default function Theming() {
 
       <H2>Mengganti tema</H2>
       <p className="text-muted-foreground">
-        Untuk memakai warna brand kamu sendiri, timpa variabelnya setelah CSS library di-import.
+        Token tinggal di <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">src/styles.css</code> milik project kamu — file itu disalin ke sana oleh <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">rakit-ui init</code>. Untuk memakai warna brand sendiri, timpa variabelnya di situ.
         Nilainya bebas dalam format warna CSS apa pun — hex, <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">oklch()</code>,
         atau <code className="rounded bg-code px-1 py-0.5 font-mono text-[0.85em]">hsl()</code>.
       </p>
       <CodeBlock
         language="css"
-        code={`@import "rakit-ui/styles.css";\n\n:root {\n  --primary: oklch(0.55 0.22 264);\n  --primary-foreground: #ffffff;\n  --radius: 0.5rem;\n}`}
+        code={`/* src/styles.css — hasil salinan \`rakit-ui init\` */\n@import "tailwindcss";\n@import "tw-animate-css";\n\n:root {\n  --primary: oklch(0.55 0.22 264);\n  --primary-foreground: #ffffff;\n  --radius: 0.5rem;\n}`}
       />
 
       <H2>Daftar token</H2>
