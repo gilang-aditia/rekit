@@ -310,6 +310,19 @@ const mat = new T.MeshPhysicalMaterial({
   envMapIntensity: 1.15, specularIntensity: 1.0, ior: 1.5,
   transparent: true, alphaTest: 0.012, opacity: 1
 });
+
+/* Tema dikirim induk lewat postMessage; scene ini ada di iframe ber-sandbox
+   sehingga tidak bisa membaca kelas tema halaman. Warna kertas digelapkan di
+   latar terang — 0xc4d2e8 disetel untuk menonjol di atas gelap dan akan pudar
+   kalau latarnya ikut terang. */
+window.addEventListener('message', function (e) {
+  if (!e.data || e.data.type !== 'rakit-theme') return;
+  const light = e.data.theme === 'light';
+  mat.color.set(light ? 0x7c8497 : 0xc4d2e8);
+  mat.envMapIntensity = light ? 0.85 : 1.15;
+  mat.needsUpdate = true;
+});
+
 mat.onBeforeCompile = (sh)=>{
   Object.assign(sh.uniforms, uni);
   sh.vertexShader = sh.vertexShader

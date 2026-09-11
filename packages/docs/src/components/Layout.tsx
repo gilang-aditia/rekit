@@ -4,6 +4,7 @@ import Sidebar from './Sidebar'
 import { Toc } from './Toc'
 import { MobileNav } from './MobileNav'
 import { ThemeToggle } from './ThemeToggle'
+import { SearchCommand } from './SearchCommand'
 import { mainNav } from '@/lib/docs-nav'
 import { cn } from '@/lib/utils'
 
@@ -39,17 +40,7 @@ function SiteHeader() {
 
           <div className="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
             <div className="flex w-auto shrink-0 md:w-auto md:flex-none justify-end md:justify-start">
-              <button
-                type="button"
-                className="relative inline-flex h-8 w-8 md:w-48 lg:w-40 xl:w-64 shrink-0 items-center justify-center md:justify-start gap-2 rounded-lg bg-muted md:pl-3 text-sm font-medium whitespace-nowrap text-foreground shadow-none transition-colors outline-none hover:bg-muted/50 dark:bg-card"
-              >
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4 md:hidden">
-                  <circle cx="11" cy="11" r="8" />
-                  <path d="m21 21-4.3-4.3" />
-                </svg>
-                <span className="hidden xl:inline-flex">Search documentation...</span>
-                <span className="hidden md:inline-flex xl:hidden">Search...</span>
-              </button>
+              <SearchCommand />
             </div>
 
             <div data-slot="separator" className="ml-2 hidden w-px shrink-0 bg-border lg:block" />

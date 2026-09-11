@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prebuild": "pnpm --filter @moonblanck/rakit-ui build && pnpm --filter @rakit-ui/library build",
+    "search-index": "node scripts/build-search-index.mjs",
+    "predev": "npm run search-index",
+    "prebuild": "npm run search-index && pnpm --filter @moonblanck/rakit-ui build && pnpm --filter @rakit-ui/library build",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },

@@ -41,6 +41,13 @@ type CommandDialogProps = {
   description?: string
   className?: string
   showCloseButton?: boolean
+  /**
+   * Diteruskan ke <Command>. Matikan bila daftar item sudah disaring sendiri —
+   * tanpa ini cmdk menyaring ulang berdasarkan `value` tiap item dan hasil yang
+   * sudah benar bisa ikut tersembunyi.
+   */
+  shouldFilter?: boolean
+  filter?: React.ComponentPropsWithoutRef<typeof CommandPrimitive>["filter"]
 }
 
 const CommandDialog = React.forwardRef<HTMLDivElement, CommandDialogProps>(
@@ -51,6 +58,8 @@ const CommandDialog = React.forwardRef<HTMLDivElement, CommandDialogProps>(
       children,
       className,
       showCloseButton = false,
+      shouldFilter,
+      filter,
       ...props
     },
     ref
@@ -66,6 +75,8 @@ const CommandDialog = React.forwardRef<HTMLDivElement, CommandDialogProps>(
       >
         <Command
           ref={ref}
+          shouldFilter={shouldFilter}
+          filter={filter}
           className="**:data-[slot=command-input-wrapper]:h-11 [&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-muted-foreground [&_[cmdk-group]]:px-1.5 [&_[cmdk-group]:not([hidden])_~[cmdk-group]]:pt-0 [&_[cmdk-input]]:h-11 [&_[cmdk-item]]:px-2 [&_[cmdk-item]]:py-2.5 [&_[cmdk-item]_svg]:size-4.5"
         >
           {children}

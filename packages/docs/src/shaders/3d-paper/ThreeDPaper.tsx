@@ -5,6 +5,9 @@ import certificateSource from "./sources/3d-paper-certificate.html?raw";
 import japaneseSource from "./sources/3d-paper-japanese.html?raw";
 import siteOfTheYearSource from "./sources/3d-paper-site-of-the-year.html?raw";
 
+import { useResolvedTheme } from "@/lib/use-resolved-theme";
+import { FRAME_BACKGROUND, THEME_BRIDGE } from "./theme-bridge";
+
 export type ThreeDPaperVariant = "original" | "site-of-the-year" | "japanese" | "certificate";
 
 export type ThreeDPaperProps = {
@@ -20,6 +23,11 @@ const sources: Record<ThreeDPaperVariant, string> = {
   certificate: certificateSource,
 };
 
+/** Dihitung sekali: srcDoc yang berubah akan memuat ulang iframe dan me-restart scene. */
+const srcDocs = Object.fromEntries(
+  Object.entries(sources).map(([variant, html]) => [variant, html + THEME_BRIDGE])
+) as Record<ThreeDPaperVariant, string>;
+
 const titles: Record<ThreeDPaperVariant, string> = {
   original: "3D Paper",
   "site-of-the-year": "3D Paper — Site of the Year",
@@ -29,6 +37,8 @@ const titles: Record<ThreeDPaperVariant, string> = {
 
 export function ThreeDPaper({ className = "", style, variant = "original" }: ThreeDPaperProps) {
   const hostRef = useRef<HTMLDivElement>(null);
+  const frameRef = useRef<HTMLIFrameElement>(null);
+  const theme = useResolvedTheme();
   const [documentVisible, setDocumentVisible] = useState(() => (
     typeof document === "undefined" || !document.hidden
   ));
@@ -55,6 +65,19 @@ export function ThreeDPaper({ className = "", style, variant = "original" }: Thr
   const mounted = hostVisible && documentVisible;
 
   useEffect(() => {
+    frameRef.current?.contentWindow?.postMessage({ type: "rakit-theme", theme }, "*");
+  }, [theme, mounted, ready]);
+
+  useEffect(() => {
+    function onMessage(event: MessageEvent) {
+      if (event.data?.type !== "rakit-theme-ready") return;
+      frameRef.current?.contentWindow?.postMessage({ type: "rakit-theme", theme }, "*");
+    }
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, [theme]);
+
+  useEffect(() => {
     setReady(false);
   }, [mounted, variant]);
 
@@ -68,7 +91,7 @@ export function ThreeDPaper({ className = "", style, variant = "original" }: Thr
       style={{
         position: "relative",
         overflow: "hidden",
-        background: "#08080a",
+        background: FRAME_BACKGROUND[theme],
         pointerEvents: "auto",
         ...style,
       }}
@@ -76,7 +99,8 @@ export function ThreeDPaper({ className = "", style, variant = "original" }: Thr
       {mounted ? (
         <iframe
           title={titles[variant]}
-          srcDoc={sources[variant]}
+          ref={frameRef}
+          srcDoc={srcDocs[variant]}
           sandbox="allow-scripts"
           loading="eager"
           onLoad={() => setReady(true)}
@@ -87,7 +111,7 @@ export function ThreeDPaper({ className = "", style, variant = "original" }: Thr
             width: "100%",
             height: "100%",
             border: 0,
-            background: "#08080a",
+            background: FRAME_BACKGROUND[theme],
             opacity: ready ? 1 : 0,
             pointerEvents: ready ? "auto" : "none",
             transition: "opacity 240ms ease-out",

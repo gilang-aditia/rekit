@@ -18,11 +18,6 @@ export const sectionsNav: NavItem[] = [
   { title: 'Installation', href: '/docs/installation' },
   { title: 'Theming', href: '/docs/theming' },
   { title: 'Gradients', href: '/docs/gradients', isNew: true },
-  { title: 'CLI', href: '/docs/cli' },
-  { title: 'Typeset', href: '/docs/typeset', soon: true },
-  { title: 'Skills', href: '/docs/skills', soon: true },
-  { title: 'Registry', href: '/docs/registry', soon: true },
-  { title: 'Changelog', href: '/docs/changelog', isNew: true },
 ]
 
 
@@ -109,7 +104,6 @@ export const mainNav = [
   { title: 'Blocks', href: '/blocks' },
   { title: 'Charts', href: '/docs/components/chart' },
   { title: 'Directory', href: '/docs/directory' },
-  { title: 'Typeset', href: '/docs/typeset' },
   { title: 'Create', href: '/create' },
 ]
 
