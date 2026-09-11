@@ -13,6 +13,9 @@ function SiteHeader() {
       <div className="container-wrapper px-6">
         <div className="flex h-(--header-height) items-center gap-2 **:data-[slot=separator]:h-4!">
           <MobileNav />
+          <NavLink to="/" className="mr-4 flex items-center lg:hidden">
+            <span className="font-bold">Rakit UI</span>
+          </NavLink>
 
           <nav className="hidden items-center gap-0 lg:flex">
             {mainNav.map((item) => (
@@ -35,13 +38,17 @@ function SiteHeader() {
           </nav>
 
           <div className="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
-            <div className="hidden w-full flex-1 md:flex md:w-auto md:flex-none">
+            <div className="flex w-auto shrink-0 md:w-auto md:flex-none justify-end md:justify-start">
               <button
                 type="button"
-                className="relative inline-flex h-8 w-full shrink-0 items-center justify-start gap-2 rounded-lg bg-muted pl-3 text-sm font-medium whitespace-nowrap text-foreground shadow-none transition-colors outline-none hover:bg-muted/50 md:w-48 lg:w-40 xl:w-64 dark:bg-card"
+                className="relative inline-flex h-8 w-8 md:w-48 lg:w-40 xl:w-64 shrink-0 items-center justify-center md:justify-start gap-2 rounded-lg bg-muted md:pl-3 text-sm font-medium whitespace-nowrap text-foreground shadow-none transition-colors outline-none hover:bg-muted/50 dark:bg-card"
               >
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4 md:hidden">
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.3-4.3" />
+                </svg>
                 <span className="hidden xl:inline-flex">Search documentation...</span>
-                <span className="inline-flex xl:hidden">Search...</span>
+                <span className="hidden md:inline-flex xl:hidden">Search...</span>
               </button>
             </div>
 
